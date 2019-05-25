@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Face_Recognition:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Face_Recognition_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Face_Recognition" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="sqljdbc4.jar" module-name="Face_Recognition" />
+          <element id="library" level="module" name="pinyin4j-2.5.0.jar" module-name="Face_Recognition" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Face_Recognition/web/Web" />
+    </root>
+  </artifact>
+</component>
