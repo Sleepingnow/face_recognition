@@ -10,7 +10,7 @@ public class AddToSql2 {
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			con = DriverManager.getConnection
-						("jdbc:sqlserver://127.0.0.1:1433;DatabaseName = Face_Recogniton","sa","yiyanping123");
+						("jdbc:sqlserver://127.0.0.1:1580;DatabaseName = Face_Recognition","sa","yiyanping123");
 		}catch(Exception e){
 			e.printStackTrace();
 		}

@@ -26,8 +26,8 @@ public class RegisterFace extends HttpServlet {
 		String sid = req.getParameter("sid");
 		String sex = req.getParameter("sex");
 		String course = req.getParameter("course");
-		AuthService.faceAdd(base64,user);
-		AddToSql1.add(sid,user,sex,base64,course);
+		AuthService.faceAdd(base64,sid);
+		AddToSql1.add(sid,user,sex,course);
 	}
 	
 }

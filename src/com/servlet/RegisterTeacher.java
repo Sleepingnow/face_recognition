@@ -26,8 +26,8 @@ public class RegisterTeacher extends HttpServlet {
 		String tid = req.getParameter("tid");
 		String sex = req.getParameter("sex");
 		String course = req.getParameter("course");
-		AuthService.faceAdd(base64,user);
+		AuthService.faceAdd(base64,tid);
+		
 		AddToSql2.add(tid,user,sex,course);
 	}
-	
 }

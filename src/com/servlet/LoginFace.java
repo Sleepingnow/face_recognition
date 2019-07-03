@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.util.AuthService;
 
 public class LoginFace extends HttpServlet {
-
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -21,7 +20,7 @@ public class LoginFace extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		String base64 = req.getParameter("img");
-		if(AuthService.isSame(base64)){
+		if(AuthService.isSame(base64,1)){
 			resp.setContentType("text/html;charset=utf-8");
 			PrintWriter out = resp.getWriter();
 			out.println("true");

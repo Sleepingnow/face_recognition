@@ -16,7 +16,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.sql.AddCheckIN;
+import com.sql.AddAttend;
+
 
 
 
@@ -186,7 +187,7 @@ public class AuthService {
 		return null;
 	}
 
-	public static boolean isSame(String base64){
+	public static boolean isSame(String base64, int i){
 		boolean flag = false;
 
 		List users = getUsers();
@@ -200,7 +201,9 @@ public class AuthService {
 			}
 			if(score>90){
 				flag = true;
-				AddCheckIN.Add(user.toString());
+				if(i==1) {
+					AddAttend.add(user.toString());
+				}
 				break;
 			}
 		}

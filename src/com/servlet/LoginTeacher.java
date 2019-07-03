@@ -15,7 +15,7 @@ import com.util.AuthService;
  */
 public class LoginTeacher extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    public static String course1 = "";
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -26,7 +26,8 @@ public class LoginTeacher extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		String base64 = req.getParameter("img");
-		if(AuthService.isSame(base64)){
+		course1 = req.getParameter("course");
+		if(AuthService.isSame(base64,0)){
 			resp.setContentType("text/html;charset=utf-8");
 			PrintWriter out = resp.getWriter();
 			out.println("true");

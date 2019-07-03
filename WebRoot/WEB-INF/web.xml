@@ -11,6 +11,7 @@
     <servlet-name>RegisterFace</servlet-name>
     <servlet-class>com.servlet.RegisterFace</servlet-class>
   </servlet>
+  
   <servlet>
     <description>
 				This is the description of my J2EE component
@@ -21,6 +22,7 @@
     <servlet-name>loginface</servlet-name>
     <servlet-class>com.servlet.LoginFace</servlet-class>
   </servlet>
+  
   <servlet>
     <description>
 				This is the description of my J2EE component
@@ -31,14 +33,17 @@
     <servlet-name>test</servlet-name>
     <servlet-class>com.servlet.test</servlet-class>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>RegisterFace</servlet-name>
     <url-pattern>/servlet/RegisterFace</url-pattern>
   </servlet-mapping>
+  
   <servlet-mapping>
     <servlet-name>loginface</servlet-name>
     <url-pattern>/servlet/LoginFace</url-pattern>
   </servlet-mapping>
+  
   <servlet-mapping>
     <servlet-name>test</servlet-name>
     <url-pattern>/servlet/test</url-pattern>
@@ -46,24 +51,64 @@
   <welcome-file-list>
     <welcome-file>facelogin.jsp</welcome-file>
   </welcome-file-list>
+  
   <servlet>
     <description></description>
     <display-name>RegisterTeacher</display-name>
     <servlet-name>RegisterTeacher</servlet-name>
     <servlet-class>com.servlet.RegisterTeacher</servlet-class>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>RegisterTeacher</servlet-name>
     <url-pattern>/servlet/RegisterTeacher</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>LoginTeacher</display-name>
     <servlet-name>LoginTeacher</servlet-name>
     <servlet-class>com.servlet.LoginTeacher</servlet-class>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>LoginTeacher</servlet-name>
     <url-pattern>/servlet/LoginTeacher</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <description></description>
+    <display-name>MsgAttend</display-name>
+    <servlet-name>MsgAttend</servlet-name>
+    <servlet-class>com.servlet.MsgAttend</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>MsgAttend</servlet-name>
+    <url-pattern>/servlet/MsgAttend</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>MsgAttend2</display-name>
+    <servlet-name>MsgAttend2</servlet-name>
+    <servlet-class>com.servlet.MsgAttend2</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>MsgAttend2</servlet-name>
+    <url-pattern>/servlet/MsgAttend2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>AddCourse</display-name>
+    <servlet-name>AddCourse</servlet-name>
+    <servlet-class>com.servlet.AddCourse</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>AddCourse</servlet-name>
+    <url-pattern>/servlet/AddCourse</url-pattern>
   </servlet-mapping>
 </web-app>

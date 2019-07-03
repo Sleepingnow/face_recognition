@@ -58,12 +58,13 @@ h1 {
 	width: 160px;
 	height: 20px;
 	margin: 0px auto;
-	background: green;
+	background: orange;
 	text-align: center;
 	line-height: 20px;
 	font-size: 14px;
 	color: white;
 }
+
 </style>
 
 </head>
@@ -75,8 +76,11 @@ h1 {
 		<canvas id="canvas" width="600" height="400"></canvas>
 		<div class="m_scan"></div>
 	</div>
+	<p>
+	 请输入当前课程号：<input type="text" id="course_input" />
+	 </p>
 	<a href="#" class="btn_recognition">点击识别</a>
-	<a href="/Face_Recognition/faceregister.jsp" class="a_register">去注册信息吧</a>
+	<a href="/Face_Recognition/teacherregister.jsp" class="a_register">去注册信息吧</a>
 </body>
 <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
@@ -123,7 +127,7 @@ h1 {
 			    $.ajax({
 					url: '/Face_Recognition/servlet/LoginTeacher',
 					type: 'POST',
-					data:{img:base64},
+					data:{img:base64,course:$("#course_input").val()},
 					dataType: 'text',
 					async: true,//异步
 					timeout: 8000,
@@ -133,6 +137,7 @@ h1 {
 					success: function(data){
 					if($.trim(data) == 'true'){
 						alert("识别成功，打卡完成");
+						window.location.href='TeacherMain.jsp';
 					}else{
 						alert("面容识别失败,请继续验证");
 					}
